@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #5255f0, #d4a2f0);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  .calculator__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      font-size: 2rem;
+      cursor: pointer;
+      border: 1px solid #fff;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.75);
+      &:hover,
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+    }
+    .calculator__container {
+      display: grid;
+      grid-template-columns: repeat(4, 6rem);
+      grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+      padding: 6rem;
+      .calculator__output {
+        grid-column: 1/-1;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+        padding: 0.75rem;
+        word-wrap: break-word;
+        word-break: break-all;
+        .calculator__previous {
+          color: rgba(255, 255, 255, 0.75);
+        }
+        .calculator__current {
+          color: #fff;
+          font-size: 2.5rem;
+        }
+      }
+      .calculator__span-two {
+        grid-column: span 2;
+      }
+    }
+  }
+}
