@@ -107,16 +107,16 @@ function evaluate({ currentOperand, previousOperand, operation }) {
   let computation = "";
   switch (operation) {
     case "+":
-      computation = prev + current;
+      computation = (prev + current).toFixed(3);
       break;
     case "-":
-      computation = prev - current;
+      computation = (prev - current).toFixed(3);
       break;
     case "*":
-      computation = prev * current;
+      computation = (prev * current).toFixed(3);
       break;
     case "÷":
-      computation = prev / current;
+      computation = (prev / current).toFixed(3);
       break;
     default:
       break;
